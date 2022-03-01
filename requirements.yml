@@ -2,4 +2,3 @@
 collections:
   - name: servicenow.itsm
   - name: amazon.aws
-  - name: community.aws

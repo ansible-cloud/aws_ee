@@ -1,11 +1,9 @@
-ARG EE_BASE_IMAGE=ansible-automation-platform-20-early-access/ee-supported-rhel8
+ARG EE_BASE_IMAGE=registry.redhat.io/ansible-automation-platform-20-early-access/ee-supported-rhel8
 ARG EE_BUILDER_IMAGE=quay.io/ansible/ansible-builder:latest
 
 FROM $EE_BASE_IMAGE as galaxy
 ARG ANSIBLE_GALAXY_CLI_COLLECTION_OPTS=
 USER root
-
-ADD _build/ansible.cfg ~/.ansible.cfg
 
 ADD _build /build
 WORKDIR /build
